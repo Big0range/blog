@@ -2,7 +2,28 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://blog.limeichao.cn/article/7f28fa45.html</loc>
+    <loc>https://blog.limeichao.cn/article/4a17b156.html</loc>
+    
+    <lastmod>2020-12-23</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://blog.limeichao.cn/article/6cb2e742.html</loc>
+    
+    <lastmod>2020-12-23</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://blog.limeichao.cn/article/ada757d6.html</loc>
+    
+    <lastmod>2020-12-23</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://blog.limeichao.cn/article/c8c26781.html</loc>
     
     <lastmod>2020-12-23</lastmod>
     
@@ -16,35 +37,14 @@
   </url>
   
   <url>
-    <loc>https://blog.limeichao.cn/article/c8c26781.html</loc>
+    <loc>https://blog.limeichao.cn/article/7f28fa45.html</loc>
     
-    <lastmod>2020-12-22</lastmod>
+    <lastmod>2020-12-23</lastmod>
     
   </url>
   
   <url>
     <loc>https://blog.limeichao.cn/article/9796ce43.html</loc>
-    
-    <lastmod>2020-12-22</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://blog.limeichao.cn/article/ada757d6.html</loc>
-    
-    <lastmod>2020-12-22</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://blog.limeichao.cn/article/6cb2e742.html</loc>
-    
-    <lastmod>2020-12-22</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://blog.limeichao.cn/article/4a17b156.html</loc>
     
     <lastmod>2020-12-22</lastmod>
     
@@ -130,14 +130,14 @@
 
   
   <url>
-    <loc>https://blog.limeichao.cn/tags/js/</loc>
+    <loc>https://blog.limeichao.cn/tags/webpack/</loc>
     <lastmod>2020-12-23</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://blog.limeichao.cn/tags/webpack/</loc>
+    <loc>https://blog.limeichao.cn/tags/js/</loc>
     <lastmod>2020-12-23</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -188,13 +188,6 @@
   </url>
   
   <url>
-    <loc>https://blog.limeichao.cn/categories/js/</loc>
-    <lastmod>2020-12-23</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://blog.limeichao.cn/categories/webpack/</loc>
     <lastmod>2020-12-23</lastmod>
     <changefreq>daily</changefreq>
@@ -202,7 +195,7 @@
   </url>
   
   <url>
-    <loc>https://blog.limeichao.cn/categories/js/%E7%AE%97%E6%B3%95/</loc>
+    <loc>https://blog.limeichao.cn/categories/js/</loc>
     <lastmod>2020-12-23</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -217,6 +210,13 @@
   
   <url>
     <loc>https://blog.limeichao.cn/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/</loc>
+    <lastmod>2020-12-23</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.limeichao.cn/categories/js/%E7%AE%97%E6%B3%95/</loc>
     <lastmod>2020-12-23</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
