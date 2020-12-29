@@ -9,9 +9,9 @@ Allow: /video/
 Allow: /picture/
 Allow: /link/
 
-Disallow: /js/
-Disallow: /css/
-Disallow: /fonts/
+Allow: /js/
+Allow: /css/
+Allow: /fonts/
 
 Sitemap: https://blog.limeichao.cn/sitemap.xml
 Sitemap: https://blog.limeichao.cn/baidusitemap.xml
