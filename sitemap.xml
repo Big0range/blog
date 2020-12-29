@@ -137,14 +137,14 @@
 
   
   <url>
-    <loc>https://blog.limeichao.cn/tags/js/</loc>
+    <loc>https://blog.limeichao.cn/tags/webpack/</loc>
     <lastmod>2020-12-29</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://blog.limeichao.cn/tags/webpack/</loc>
+    <loc>https://blog.limeichao.cn/tags/js/</loc>
     <lastmod>2020-12-29</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -209,13 +209,6 @@
   </url>
   
   <url>
-    <loc>https://blog.limeichao.cn/categories/js/</loc>
-    <lastmod>2020-12-29</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://blog.limeichao.cn/categories/webpack/</loc>
     <lastmod>2020-12-29</lastmod>
     <changefreq>daily</changefreq>
@@ -223,21 +216,14 @@
   </url>
   
   <url>
+    <loc>https://blog.limeichao.cn/categories/js/</loc>
+    <lastmod>2020-12-29</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://blog.limeichao.cn/categories/vue/</loc>
-    <lastmod>2020-12-29</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.limeichao.cn/categories/js/%E7%AE%97%E6%B3%95/</loc>
-    <lastmod>2020-12-29</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.limeichao.cn/categories/vue/vue3/</loc>
     <lastmod>2020-12-29</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -252,6 +238,20 @@
   
   <url>
     <loc>https://blog.limeichao.cn/categories/css/</loc>
+    <lastmod>2020-12-29</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.limeichao.cn/categories/js/%E7%AE%97%E6%B3%95/</loc>
+    <lastmod>2020-12-29</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.limeichao.cn/categories/vue/vue3/</loc>
     <lastmod>2020-12-29</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
