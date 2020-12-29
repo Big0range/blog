@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://blog.limeichao.cn/baidu_verify_code-Sa9uYpY00L.html</loc>
+    
+    <lastmod>2020-12-29</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://blog.limeichao.cn/article/ec28b177.html</loc>
     
     <lastmod>2020-12-29</lastmod>
@@ -45,13 +52,6 @@
   
   <url>
     <loc>https://blog.limeichao.cn/google627510cc48ebcf1f.html</loc>
-    
-    <lastmod>2020-12-22</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://blog.limeichao.cn/baidu_verify_code-5TjgbWbe3F.html</loc>
     
     <lastmod>2020-12-22</lastmod>
     
@@ -137,14 +137,14 @@
 
   
   <url>
-    <loc>https://blog.limeichao.cn/tags/webpack/</loc>
+    <loc>https://blog.limeichao.cn/tags/js/</loc>
     <lastmod>2020-12-29</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://blog.limeichao.cn/tags/js/</loc>
+    <loc>https://blog.limeichao.cn/tags/webpack/</loc>
     <lastmod>2020-12-29</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -209,6 +209,13 @@
   </url>
   
   <url>
+    <loc>https://blog.limeichao.cn/categories/js/</loc>
+    <lastmod>2020-12-29</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://blog.limeichao.cn/categories/webpack/</loc>
     <lastmod>2020-12-29</lastmod>
     <changefreq>daily</changefreq>
@@ -216,7 +223,7 @@
   </url>
   
   <url>
-    <loc>https://blog.limeichao.cn/categories/js/</loc>
+    <loc>https://blog.limeichao.cn/categories/js/%E7%AE%97%E6%B3%95/</loc>
     <lastmod>2020-12-29</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -238,13 +245,6 @@
   
   <url>
     <loc>https://blog.limeichao.cn/categories/css/</loc>
-    <lastmod>2020-12-29</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.limeichao.cn/categories/js/%E7%AE%97%E6%B3%95/</loc>
     <lastmod>2020-12-29</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
