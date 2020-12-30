@@ -158,6 +158,13 @@
   </url>
   
   <url>
+    <loc>https://blog.limeichao.cn/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/</loc>
+    <lastmod>2020-12-30</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://blog.limeichao.cn/tags/vue/</loc>
     <lastmod>2020-12-30</lastmod>
     <changefreq>daily</changefreq>
@@ -173,13 +180,6 @@
   
   <url>
     <loc>https://blog.limeichao.cn/tags/vue3%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/</loc>
-    <lastmod>2020-12-30</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.limeichao.cn/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/</loc>
     <lastmod>2020-12-30</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -230,14 +230,14 @@
   </url>
   
   <url>
-    <loc>https://blog.limeichao.cn/categories/vue/</loc>
+    <loc>https://blog.limeichao.cn/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/</loc>
     <lastmod>2020-12-30</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://blog.limeichao.cn/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/</loc>
+    <loc>https://blog.limeichao.cn/categories/vue/</loc>
     <lastmod>2020-12-30</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>

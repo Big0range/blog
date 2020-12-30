@@ -14,4 +14,4 @@ Allow: /css/
 Allow: /fonts/
 
 Sitemap: https://blog.limeichao.cn/sitemap.xml
-Sitemap: https://blog.limeichao.cn/baidusitemap.xml
+Sitemap: https://boke.limeichao.cn/baidusitemap.xml
