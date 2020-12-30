@@ -8,6 +8,8 @@ Allow: /music/
 Allow: /video/
 Allow: /picture/
 Allow: /link/
+Allow: /article/
+Allow: /archives/
 
 Allow: /js/
 Allow: /css/
