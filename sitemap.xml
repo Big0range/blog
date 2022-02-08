@@ -234,14 +234,14 @@
   </url>
   
   <url>
-    <loc>https://blog.limeichao.cn/tags/%E7%AE%97%E6%B3%95/</loc>
+    <loc>https://blog.limeichao.cn/tags/webpack/</loc>
     <lastmod>2022-02-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://blog.limeichao.cn/tags/webpack/</loc>
+    <loc>https://blog.limeichao.cn/tags/%E7%AE%97%E6%B3%95/</loc>
     <lastmod>2022-02-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
