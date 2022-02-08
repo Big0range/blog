@@ -1,0 +1,19 @@
+User-agent: *
+Allow: /
+Allow: /tags/
+Allow: /_post/
+Allow: /about/
+Allow: /categories/
+Allow: /music/
+Allow: /video/
+Allow: /picture/
+Allow: /link/
+Allow: /article/
+Allow: /archives/
+
+Allow: /js/
+Allow: /css/
+Allow: /fonts/
+
+Sitemap: https://blog.limeichao.cn/sitemap.xml
+Sitemap: https://boke.limeichao.cn/baidusitemap.xml
