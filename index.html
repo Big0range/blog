@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="baidu-site-verification" content="code-N3iAHYQCeF"><title>Big0range</title><meta name="keywords" content="博客 李美超 Big0range"><meta name="author" content="李美超"><meta name="copyright" content="李美超"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><meta property="og:type" content="website">
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>Big0range</title><meta name="author" content="李美超"><meta name="copyright" content="李美超"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta property="og:type" content="website">
 <meta property="og:title" content="Big0range">
 <meta property="og:url" content="https://blog.limeichao.cn/index.html">
 <meta property="og:site_name" content="Big0range">
@@ -7,13 +7,13 @@
 <meta property="article:author" content="李美超">
 <meta property="article:tag" content="博客 李美超 Big0range">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://pic.rmb.bdstatic.com/bjh/7bde11e6a7dacab7cd41372aaa671c08.jpeg"><link rel="shortcut icon" href="/images/favicon.ico"><link rel="canonical" href="https://blog.limeichao.cn/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//fonts.googleapis.com" crossorigin=""/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="preconnect" href="//zz.bdstatic.com"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web&amp;display=swap" media="print" onload="this.media='all'"><script>var GLOBAL_CONFIG = { 
+<meta name="twitter:image" content="https://pic.rmb.bdstatic.com/bjh/7bde11e6a7dacab7cd41372aaa671c08.jpeg"><link rel="shortcut icon" href="/images/favicon.ico"><link rel="canonical" href="https://blog.limeichao.cn/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=4.13.0"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.1/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.33/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
   root: '/',
   algolia: undefined,
-  localSearch: {"path":"search.xml","languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  localSearch: {"path":"/search.xml","preload":false,"top_n_per_article":1,"unescape":false,"languages":{"hits_empty":"找不到您查询的内容：${query}","hits_stats":"共找到 ${hits} 篇文章"}},
   translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"簡"},
   noticeOutdate: undefined,
-  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":false},
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":false,"highlightHeightLimit":false},
   copy: {
     success: '复制成功',
     error: '复制错误',
@@ -24,7 +24,7 @@
     post: true
   },
   runtime: '天',
-  date_suffix: {
+  dateSuffix: {
     just: '刚刚',
     min: '分钟前',
     hour: '小时前',
@@ -33,144 +33,246 @@
   },
   copyright: {"limitCount":50,"languages":{"author":"作者: 李美超","link":"链接: ","source":"来源: Big0range","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。"}},
   lightbox: 'fancybox',
-  Snackbar: {"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#49b1f5","bgDark":"#121212","position":"bottom-left"},
-  source: {
-    jQuery: 'https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js',
-    justifiedGallery: {
-      js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
-      css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
-    },
-    fancybox: {
-      js: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js',
-      css: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css'
-    }
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.11.1/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
   },
   isPhotoFigcaption: false,
   islazyload: true,
-  isanchor: false
-};
-
-var saveToLocal = {
-  set: function setWithExpiry(key, value, ttl) {
-    const now = new Date()
-    const expiryDay = ttl * 86400000
-    const item = {
-      value: value,
-      expiry: now.getTime() + expiryDay,
-    }
-    localStorage.setItem(key, JSON.stringify(item))
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: true,
   },
-
-  get: function getWithExpiry(key) {
-    const itemStr = localStorage.getItem(key)
-
-    if (!itemStr) {
-      return undefined
-    }
-    const item = JSON.parse(itemStr)
-    const now = new Date()
-
-    if (now.getTime() > item.expiry) {
-      localStorage.removeItem(key)
-      return undefined
-    }
-    return item.value
-  }
-}
-
-// https://stackoverflow.com/questions/16839698/jquery-getscript-alternative-in-native-javascript
-const getScript = url => new Promise((resolve, reject) => {
-  const script = document.createElement('script')
-  script.src = url
-  script.async = true
-  script.onerror = reject
-  script.onload = script.onreadystatechange = function() {
-    const loadState = this.readyState
-    if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
-    script.onload = script.onreadystatechange = null
-    resolve()
-  }
-  document.head.appendChild(script)
-})</script><script id="config_change">var GLOBAL_CONFIG_SITE = { 
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Big0range',
   isPost: false,
   isHome: true,
   isHighlightShrink: false,
   isToc: false,
-  postUpdate: '2023-06-29 16:47:41'
-}</script><noscript><style type="text/css">
-  #nav {
-    opacity: 1
-  }
-  .justified-gallery img {
-    opacity: 1
-  }
-
-  #recent-posts time,
-  #post-meta time {
-    display: inline !important
-  }
-</style></noscript><script>(function () {  window.activateDarkMode = function () {
-    document.documentElement.setAttribute('data-theme', 'dark')
-    if (document.querySelector('meta[name="theme-color"]') !== null) {
-      document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
-    }
-  }
-  window.activateLightMode = function () {
-    document.documentElement.setAttribute('data-theme', 'light')
-   if (document.querySelector('meta[name="theme-color"]') !== null) {
-      document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
-    }
-  }
-  const autoChangeMode = 'false'
-  const t = saveToLocal.get('theme')
-  if (autoChangeMode === '1') {
-    const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
-    const isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
-    const isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
-    const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
-    if (t === undefined) {
-      if (isLightMode) activateLightMode()
-      else if (isDarkMode) activateDarkMode()
-      else if (isNotSpecified || hasNoSupport) {
-        const now = new Date()
-        const hour = now.getHours()
-        const isNight = hour <= 6 || hour >= 18
-        isNight ? activateDarkMode() : activateLightMode()
-      }
-      window.matchMedia('(prefers-color-scheme: dark)').addListener(function (e) {
-        if (saveToLocal.get('theme') === undefined) {
-          e.matches ? activateDarkMode() : activateLightMode()
+  postUpdate: '2024-02-27 09:23:26'
+}</script><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
         }
+      }
+    
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
+
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
+
+        document.head.appendChild(script)
       })
-    } else if (t === 'light') activateLightMode()
-    else activateDarkMode()
-  } else if (autoChangeMode === '2') {
-    const now = new Date()
-    const hour = now.getHours()
-    const isNight = hour <= 6 || hour >= 18
-    if (t === undefined) isNight ? activateDarkMode() : activateLightMode()
-    else if (t === 'light') activateLightMode()
-    else activateDarkMode()
-  } else {
-    if (t === 'dark') activateDarkMode()
-    else if (t === 'light') activateLightMode()
-  }const asideStatus = saveToLocal.get('aside-status')
-if (asideStatus !== undefined) {
-   if (asideStatus === 'hide') {
-     document.documentElement.classList.add('hide-aside')
-   } else {
-     document.documentElement.classList.remove('hide-aside')
-   }
-}})()</script><meta name="generator" content="Hexo 5.4.0"></head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="author-avatar"><img class="avatar-img" data-lazy-src="https://pic.rmb.bdstatic.com/bjh/7bde11e6a7dacab7cd41372aaa671c08.jpeg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">16</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">标签</div><div class="length-num">11</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">分类</div><div class="length-num">9</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-folder-open"></i><span> 娱乐</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page" href="/video/"><i class="fa-fw fas fa-video"></i><span> 视频</span></a></li><li><a class="site-page" href="/picture/"><i class="fa-fw fas fa-images"></i><span> 图片</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div id="body-wrap"><header class="full_page" id="page-header" style="background-image: url(https://pic.rmb.bdstatic.com/bjh/e9cacddaab0a63026e7c73ea9957c39c.jpeg)"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">Big0range</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-folder-open"></i><span> 娱乐</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page" href="/video/"><i class="fa-fw fas fa-video"></i><span> 视频</span></a></li><li><a class="site-page" href="/picture/"><i class="fa-fw fas fa-images"></i><span> 图片</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="site-info"><h1 id="site-title">Big0range</h1><div id="site-subtitle"><span id="subtitle"></span></div><div id="site_social_icons"><a class="social-icon" href="https://gitee.com/li_mei_chao" target="_blank" title="Gitee(不是Github)"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:957779152@qq.com" target="_blank" title="Email(邮箱)"><i class="fas fa-envelope"></i></a><a class="social-icon" href="https://www.npmjs.com/~li_mei_chao" target="_blank" title="NPM"><i class="fab fa-npm"></i></a></div></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="post_cover left_radius"><a href="/article/4a17b156.html" title="Hello World">     <img class="post_bg" data-lazy-src="https://pic.rmb.bdstatic.com/bjh/9958d994ea8a04c9ae211451eca1e07c.jpeg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Hello World"></a></div><div class="recent-post-info"><a class="article-title" href="/article/4a17b156.html" title="Hello World">Hello World</a><div class="article-meta-wrap"><span class="article-meta"><i class="fas fa-thumbtack article-meta__icon sticky"></i><span class="sticky">置顶</span><span class="article-meta__separator">|</span></span><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-09-30T16:00:00.000Z" title="发表于 2020-10-01 00:00:00">2020-10-01</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/%E6%90%AD%E5%BB%BA%E6%88%90%E5%8A%9F/">搭建成功</a></span></div><div class="content">我是Big0range 不是 BigOrange </div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/article/17962290.html" title="vane 一个适用于前端打工人的全栈框架,nodejs+vue3+typescript">     <img class="post_bg" data-lazy-src="https://cos.limeichao.cn/images/dalailai.png?imageMogr2/format/webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="vane 一个适用于前端打工人的全栈框架,nodejs+vue3+typescript"></a></div><div class="recent-post-info"><a class="article-title" href="/article/17962290.html" title="vane 一个适用于前端打工人的全栈框架,nodejs+vue3+typescript">vane 一个适用于前端打工人的全栈框架,nodejs+vue3+typescript</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-06-29T08:46:00.000Z" title="发表于 2023-06-29 16:46:00">2023-06-29</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/ts/">ts</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag article-meta__icon"></i><a class="article-meta__tags" href="/tags/ts-js-Vue3-TypeScript-Node/">ts js Vue3 TypeScript Node</a></span></div><div class="content">vane 一个适用于前端打工人的全栈框架,nodejs+vue3+typescript</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/article/a3e83579.html" title="获取数组元素的类型 普通函数的返回类型 Promise的返回类型 ()=&gt;Promise的返回类型">     <img class="post_bg" data-lazy-src="https://pic5.58cdn.com.cn/nowater/webim/big/n_v216d9c97048ab46a8ad1ca1cab471659f.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="获取数组元素的类型 普通函数的返回类型 Promise的返回类型 ()=&gt;Promise的返回类型"></a></div><div class="recent-post-info"><a class="article-title" href="/article/a3e83579.html" title="获取数组元素的类型 普通函数的返回类型 Promise的返回类型 ()=&gt;Promise的返回类型">获取数组元素的类型 普通函数的返回类型 Promise的返回类型 ()=&gt;Promise的返回类型</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-06-29T08:38:56.816Z" title="发表于 2023-06-29 16:38:56">2023-06-29</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/ts/">ts</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag article-meta__icon"></i><a class="article-meta__tags" href="/tags/ts/">ts</a></span></div><div class="content">获取数组元素的类型 普通函数的返回类型 Promise的返回类型 ()=>Promise的返回类型</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/article/3151c6f1.html" title="为什么null==0为false">     <img class="post_bg" data-lazy-src="https://pic.rmb.bdstatic.com/bjh/74a6f5ad1d43df653c00725e397f8599.jpeg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="为什么null==0为false"></a></div><div class="recent-post-info"><a class="article-title" href="/article/3151c6f1.html" title="为什么null==0为false">为什么null==0为false</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2022-02-23T08:45:28.193Z" title="发表于 2022-02-23 16:45:28">2022-02-23</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/js/">js</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag article-meta__icon"></i><a class="article-meta__tags" href="/tags/js/">js</a></span></div><div class="content">为什么null==0为false</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/article/d1fbc562.html" title="vue3-element-admin">     <img class="post_bg" data-lazy-src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fp5.itc.cn%2Fimages03%2F20200517%2Fb299953d249f4e0ead0e06da9ae1c25e.jpeg&amp;refer=http%3A%2F%2Fp5.itc.cn&amp;app=2002&amp;size=f9999,10000&amp;q=a80&amp;n=0&amp;g=0n&amp;fmt=jpeg?sec=1639724368&amp;t=d7744f521ea73a7bb4825b13bae75694" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="vue3-element-admin"></a></div><div class="recent-post-info"><a class="article-title" href="/article/d1fbc562.html" title="vue3-element-admin">vue3-element-admin</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2021-12-14T09:31:32.570Z" title="发表于 2021-12-14 17:31:32">2021-12-14</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/js/">js</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag article-meta__icon"></i><a class="article-meta__tags" href="/tags/js/">js</a></span></div><div class="content">vue3-element-admin</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/article/562d4505.html" title="Nuxt 中的store数据持久化存储(防止Vuex数据刷新丢失)">     <img class="post_bg" data-lazy-src="https://pic.rmb.bdstatic.com/bjh/1ae08fcc8005dceada95f152d969af50.jpeg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Nuxt 中的store数据持久化存储(防止Vuex数据刷新丢失)"></a></div><div class="recent-post-info"><a class="article-title" href="/article/562d4505.html" title="Nuxt 中的store数据持久化存储(防止Vuex数据刷新丢失)">Nuxt 中的store数据持久化存储(防止Vuex数据刷新丢失)</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2021-12-14T09:31:32.560Z" title="发表于 2021-12-14 17:31:32">2021-12-14</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/js/">js</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag article-meta__icon"></i><a class="article-meta__tags" href="/tags/js/">js</a></span></div><div class="content">Nuxt 中的store数据持久化存储(防止Vuex数据刷新丢失)</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/article/325b2ef6.html" title="前端项目搭建规范">     <img class="post_bg" data-lazy-src="https://pic.rmb.bdstatic.com/bjh/439e7920e6d05a2036b598f79e48cb2e.jpeg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="前端项目搭建规范"></a></div><div class="recent-post-info"><a class="article-title" href="/article/325b2ef6.html" title="前端项目搭建规范">前端项目搭建规范</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2021-12-14T09:31:32.560Z" title="发表于 2021-12-14 17:31:32">2021-12-14</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/js/">js</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag article-meta__icon"></i><a class="article-meta__tags" href="/tags/js/">js</a></span></div><div class="content">前端项目搭建规范</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/article/7885e224.html" title="手摸手带你用Hexo撸博客(三)之添加评论系统">     <img class="post_bg" data-lazy-src="https://pic.rmb.bdstatic.com/bjh/bd4cb1a976d03f1543cea7d1cade5de1.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="手摸手带你用Hexo撸博客(三)之添加评论系统"></a></div><div class="recent-post-info"><a class="article-title" href="/article/7885e224.html" title="手摸手带你用Hexo撸博客(三)之添加评论系统">手摸手带你用Hexo撸博客(三)之添加评论系统</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2021-01-04T01:11:52.000Z" title="发表于 2021-01-04 09:11:52">2021-01-04</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/">博客搭建</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag article-meta__icon"></i><a class="article-meta__tags" href="/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/">博客搭建</a></span></div><div class="content">手摸手带你用Hexo撸博客(三)之添加评论系统</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/article/fdc79fa4.html" title="手摸手带你用Hexo撸博客(二)之配置主题">     <img class="post_bg" data-lazy-src="https://pic.rmb.bdstatic.com/bjh/73a075e500ef28788afd05ca08d126eb.jpeg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="手摸手带你用Hexo撸博客(二)之配置主题"></a></div><div class="recent-post-info"><a class="article-title" href="/article/fdc79fa4.html" title="手摸手带你用Hexo撸博客(二)之配置主题">手摸手带你用Hexo撸博客(二)之配置主题</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-12-29T08:10:57.000Z" title="发表于 2020-12-29 16:10:57">2020-12-29</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/">博客搭建</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag article-meta__icon"></i><a class="article-meta__tags" href="/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/">博客搭建</a></span></div><div class="content">手摸手带你用Hexo撸博客(二)之配置主题</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/article/ec28b177.html" title="css实现瀑布流布局">     <img class="post_bg" data-lazy-src="https://pic.rmb.bdstatic.com/bjh/faf9b32d8f129698a90c75ddf8cac98c.jpeg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="css实现瀑布流布局"></a></div><div class="recent-post-info"><a class="article-title" href="/article/ec28b177.html" title="css实现瀑布流布局">css实现瀑布流布局</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-12-24T06:58:44.000Z" title="发表于 2020-12-24 14:58:44">2020-12-24</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/css/">css</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag article-meta__icon"></i><a class="article-meta__tags" href="/tags/css/">css</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/tags/%E5%B8%83%E5%B1%80/">布局</a></span></div><div class="content">最简单的瀑布流布局方法</div></div></div><nav id="pagination"><div class="pagination"><span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="fas fa-chevron-right fa-fw"></i></a></div></nav></div><div class="aside_content" id="aside_content"><div class="card-widget card-info"><div class="card-content"><div class="card-info-avatar is-center"><img class="avatar-img" data-lazy-src="https://pic.rmb.bdstatic.com/bjh/7bde11e6a7dacab7cd41372aaa671c08.jpeg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/><div class="author-info__name">李美超</div><div class="author-info__description"></div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">16</div></a></div><div class="card-info-data-item is-center"><a href="/tags/"><div class="headline">标签</div><div class="length-num">11</div></a></div><div class="card-info-data-item is-center"><a href="/categories/"><div class="headline">分类</div><div class="length-num">9</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://gitee.com/li_mei_chao"><i class="fab fa-github"></i><span>关注我</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://gitee.com/li_mei_chao" target="_blank" title="Gitee(不是Github)"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:957779152@qq.com" target="_blank" title="Email(邮箱)"><i class="fas fa-envelope"></i></a><a class="social-icon" href="https://www.npmjs.com/~li_mei_chao" target="_blank" title="NPM"><i class="fab fa-npm"></i></a></div></div></div><div class="card-widget card-announcement"><div class="card-content"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content">一起van♂</div></div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="card-content"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/article/17962290.html" title="vane 一个适用于前端打工人的全栈框架,nodejs+vue3+typescript"><img data-lazy-src="https://cos.limeichao.cn/images/dalailai.png?imageMogr2/format/webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="vane 一个适用于前端打工人的全栈框架,nodejs+vue3+typescript"/></a><div class="content"><a class="title" href="/article/17962290.html" title="vane 一个适用于前端打工人的全栈框架,nodejs+vue3+typescript">vane 一个适用于前端打工人的全栈框架,nodejs+vue3+typescript</a><time datetime="2023-06-29T08:46:00.000Z" title="发表于 2023-06-29 16:46:00">2023-06-29</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/article/a3e83579.html" title="获取数组元素的类型 普通函数的返回类型 Promise的返回类型 ()=&gt;Promise的返回类型"><img data-lazy-src="https://pic5.58cdn.com.cn/nowater/webim/big/n_v216d9c97048ab46a8ad1ca1cab471659f.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="获取数组元素的类型 普通函数的返回类型 Promise的返回类型 ()=&gt;Promise的返回类型"/></a><div class="content"><a class="title" href="/article/a3e83579.html" title="获取数组元素的类型 普通函数的返回类型 Promise的返回类型 ()=&gt;Promise的返回类型">获取数组元素的类型 普通函数的返回类型 Promise的返回类型 ()=&gt;Promise的返回类型</a><time datetime="2023-06-29T08:38:56.816Z" title="发表于 2023-06-29 16:38:56">2023-06-29</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/article/3151c6f1.html" title="为什么null==0为false"><img data-lazy-src="https://pic.rmb.bdstatic.com/bjh/74a6f5ad1d43df653c00725e397f8599.jpeg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="为什么null==0为false"/></a><div class="content"><a class="title" href="/article/3151c6f1.html" title="为什么null==0为false">为什么null==0为false</a><time datetime="2022-02-23T08:45:28.193Z" title="发表于 2022-02-23 16:45:28">2022-02-23</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/article/d1fbc562.html" title="vue3-element-admin"><img data-lazy-src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fp5.itc.cn%2Fimages03%2F20200517%2Fb299953d249f4e0ead0e06da9ae1c25e.jpeg&amp;refer=http%3A%2F%2Fp5.itc.cn&amp;app=2002&amp;size=f9999,10000&amp;q=a80&amp;n=0&amp;g=0n&amp;fmt=jpeg?sec=1639724368&amp;t=d7744f521ea73a7bb4825b13bae75694" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="vue3-element-admin"/></a><div class="content"><a class="title" href="/article/d1fbc562.html" title="vue3-element-admin">vue3-element-admin</a><time datetime="2021-12-14T09:31:32.570Z" title="发表于 2021-12-14 17:31:32">2021-12-14</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/article/562d4505.html" title="Nuxt 中的store数据持久化存储(防止Vuex数据刷新丢失)"><img data-lazy-src="https://pic.rmb.bdstatic.com/bjh/1ae08fcc8005dceada95f152d969af50.jpeg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Nuxt 中的store数据持久化存储(防止Vuex数据刷新丢失)"/></a><div class="content"><a class="title" href="/article/562d4505.html" title="Nuxt 中的store数据持久化存储(防止Vuex数据刷新丢失)">Nuxt 中的store数据持久化存储(防止Vuex数据刷新丢失)</a><time datetime="2021-12-14T09:31:32.560Z" title="发表于 2021-12-14 17:31:32">2021-12-14</time></div></div></div></div></div><div class="card-widget card-categories"><div class="card-content"><div class="item-headline"><i class="fas fa-folder-open"></i><span>分类</span></div><ul class="card-category-list" id="aside-cat-list">
-            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/css/"><span class="card-category-list-name">css</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/js/"><span class="card-category-list-name">js</span><span class="card-category-list-count">7</span></a><ul class="card-category-list child"><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/js/%E7%AE%97%E6%B3%95/"><span class="card-category-list-name">算法</span><span class="card-category-list-count">1</span></a></li></ul></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/ts/"><span class="card-category-list-name">ts</span><span class="card-category-list-count">2</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/vue/"><span class="card-category-list-name">vue</span><span class="card-category-list-count">1</span></a><ul class="card-category-list child"><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/vue/vue3/"><span class="card-category-list-name">vue3</span><span class="card-category-list-count">1</span></a></li></ul></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/webpack/"><span class="card-category-list-name">webpack</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"><span class="card-category-list-name">博客搭建</span><span class="card-category-list-count">3</span></a></li>
-            <li class="card-category-list-item more is-center"><a class="card-category-list-link-more" href="/categories/">
-                <span>查看更多</span><i class="fas fa-angle-right"></i></a></li>
-            </ul></div></div><div class="card-widget card-tags"><div class="card-content"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/js/" style="font-size: 1.5em; color: rgb(148, 133, 160)">js</a><a href="/tags/webpack/" style="font-size: 1.1em; color: rgb(37, 95, 159)">webpack</a><a href="/tags/%E7%AE%97%E6%B3%95/" style="font-size: 1.1em; color: rgb(155, 7, 144)">算法</a><a href="/tags/vue/" style="font-size: 1.1em; color: rgb(95, 113, 8)">vue</a><a href="/tags/vue3/" style="font-size: 1.1em; color: rgb(44, 50, 22)">vue3</a><a href="/tags/vue3%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/" style="font-size: 1.1em; color: rgb(16, 134, 33)">vue3生命周期</a><a href="/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/" style="font-size: 1.3em; color: rgb(171, 14, 139)">博客搭建</a><a href="/tags/css/" style="font-size: 1.1em; color: rgb(131, 30, 198)">css</a><a href="/tags/%E5%B8%83%E5%B1%80/" style="font-size: 1.1em; color: rgb(164, 48, 166)">布局</a><a href="/tags/ts/" style="font-size: 1.1em; color: rgb(147, 146, 136)">ts</a><a href="/tags/ts-js-Vue3-TypeScript-Node/" style="font-size: 1.1em; color: rgb(64, 162, 181)">ts js Vue3 TypeScript Node</a></div></div></div><div class="card-widget card-archives"><div class="card-content"><div class="item-headline"><i class="fas fa-archive"></i><span>时间轴</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/06/"><span class="card-archive-list-date">六月 2023</span><span class="card-archive-list-count">2</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2022/02/"><span class="card-archive-list-date">二月 2022</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/12/"><span class="card-archive-list-date">十二月 2021</span><span class="card-archive-list-count">3</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/01/"><span class="card-archive-list-date">一月 2021</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/12/"><span class="card-archive-list-date">十二月 2020</span><span class="card-archive-list-count">5</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/10/"><span class="card-archive-list-date">十月 2020</span><span class="card-archive-list-count">4</span></a></li></ul></div></div><div class="card-widget card-webinfo"><div class="card-content"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站资讯</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">16</div></div><div class="webinfo-item"><div class="item-name">已运行时间 :</div><div class="item-count" id="runtimeshow" data-publishDate="2020-12-20T16:00:00.000Z"></div></div><div class="webinfo-item"><div class="item-name">本站总字数 :</div><div class="item-count">16.4k</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"></div></div><div class="webinfo-item"><div class="item-name">本站总访问量 :</div><div class="item-count" id="busuanzi_value_site_pv"></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2023-06-29T08:47:41.793Z"></div></div></div></div></div></div></div></main><footer id="footer" style="background-image: url(https://pic.rmb.bdstatic.com/bjh/e9cacddaab0a63026e7c73ea9957c39c.jpeg)"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2023 By 李美超</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text">Hi, welcome to my <a target="_blank" rel="noopener" href="https://gitee.com/li_mei_chao">blog</a>!</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="translateLink" type="button" title="简繁转换">繁</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><div class="search-dialog__title" id="local-search-title">本地搜索</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div></div><hr/><div id="local-search-results"></div><span class="search-close-button"><i class="fas fa-times"></i></span></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module"></script><script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload/dist/lazyload.iife.min.js"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js"></script><script>function panguFn () {
-  if (typeof pangu === 'object') pangu.spacingElementById('content-inner')
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+        if (t === 'dark') activateDarkMode()
+        else if (t === 'light') activateLightMode()
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><meta name="generator" content="Hexo 7.1.1"></head><body><script>window.paceOptions = {
+  restartOnPushState: false
+}
+
+document.addEventListener('pjax:send', () => {
+  Pace.restart()
+})
+</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/themes/blue/pace-theme-minimal.min.css"/><script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js"></script><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://pic.rmb.bdstatic.com/bjh/7bde11e6a7dacab7cd41372aaa671c08.jpeg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">15</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">11</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">9</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-folder-open"></i><span> 娱乐</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐 </span></a></li><li><a class="site-page child" href="/video/"><i class="fa-fw fas fa-video"></i><span> 视频 </span></a></li><li><a class="site-page child" href="/picture/"><i class="fa-fw fas fa-images"></i><span> 图片 </span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="page" id="body-wrap"><header class="full_page fixed" id="page-header" style="background-image: url('https://pic.rmb.bdstatic.com/bjh/e9cacddaab0a63026e7c73ea9957c39c.jpeg')"><nav id="nav"><span id="blog-info"><a href="/" title="Big0range"><span class="site-name">Big0range</span></a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search" href="javascript:void(0);"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-folder-open"></i><span> 娱乐</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐 </span></a></li><li><a class="site-page child" href="/video/"><i class="fa-fw fas fa-video"></i><span> 视频 </span></a></li><li><a class="site-page child" href="/picture/"><i class="fa-fw fas fa-images"></i><span> 图片 </span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="site-info"><h1 id="site-title">Big0range</h1><div id="site_social_icons"><a class="social-icon" href="https://gitee.com/li_mei_chao" target="_blank" title="Gitee(不是Github)"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:957779152@qq.com" target="_blank" title="Email(邮箱)"><i class="fas fa-envelope"></i></a><a class="social-icon" href="https://www.npmjs.com/~li_mei_chao" target="_blank" title="NPM"><i class="fab fa-npm"></i></a></div></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="post_cover left"><a href="/article/4a17b156.html" title="Hello World"><img class="post-bg" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="http://www.limeichao.cn:7791/i/2024/02/26/65dc30b3b6c20.jpeg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Hello World"></a></div><div class="recent-post-info"><a class="article-title" href="/article/4a17b156.html" title="Hello World"><i class="fas fa-thumbtack sticky"></i>Hello World</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-09-30T16:00:00.000Z" title="发表于 2020-10-01 00:00:00">2020-10-01</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E6%90%AD%E5%BB%BA%E6%88%90%E5%8A%9F/">搭建成功</a></span></div><div class="content">我是Big0range 不是 BigOrange因为O这个单词,太胖了,不好看
+ 
+        .dot{
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #635854;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+        }
+
+        .boxs {
+            font-size: 0;
+            width: 220px;
+            height: 220px;
+            animation:circleRoate 2s infinite;
+            animation-timing-function:linear;
+          ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/article/17962290.html" title="vane 一个适用于前端打工人的全栈框架,nodejs+vue3+typescript"><img class="post-bg" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://cos.limeichao.cn/images/dalailai.png?imageMogr2/format/webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="vane 一个适用于前端打工人的全栈框架,nodejs+vue3+typescript"></a></div><div class="recent-post-info"><a class="article-title" href="/article/17962290.html" title="vane 一个适用于前端打工人的全栈框架,nodejs+vue3+typescript">vane 一个适用于前端打工人的全栈框架,nodejs+vue3+typescript</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-06-29T08:46:00.000Z" title="发表于 2023-06-29 16:46:00">2023-06-29</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/ts/">ts</a></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/ts-js-Vue3-TypeScript-Node/">ts js Vue3 TypeScript Node</a></span></div><div class="content">vane写这个的初衷是因为每次用node写接口的时候总是需要一些写大一堆的东西, 也有些人把很多接口都放在一个js文件内, 看起来很是杂乱, 后来用到nuxt写的时候, 感觉用文件名来命名接口路径很是方便, 无论是query参数还是params参数,都可以通过文件名来命名, 也可以通过文件夹层级清晰的反映出接口之间的关系, 于是就有了这个项目, 能够节省很大一部分时间, 也能够让接口更加清晰, 也能够让接口更加清晰, 也能够让接口更加清晰, 重要的事情说三遍。节省下来的时间用来休息和摸鱼多好(不是让你接着内卷的)。如果真的帮到了你的话,觉得这个项目还不错的话, 可以给我一个star, 也可以给我一个star, 也可以给我一个star, 重要的事情说三遍。
+github传送门
+gitee传送门
+
+
+技术栈webVue3, TypeScript, Vite nodeservernode, TypeScript, express, sequelize, mysql, redisserver进阶docker, docker-componse, pm2
+node版本: ^18pnpm版本: ^8 ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/article/a3e83579.html" title="获取数组元素的类型 普通函数的返回类型 Promise的返回类型 ()=&gt;Promise的返回类型"><img class="post-bg" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="http://www.limeichao.cn:7791/i/2024/02/26/65dc32951a28f.jpeg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="获取数组元素的类型 普通函数的返回类型 Promise的返回类型 ()=&gt;Promise的返回类型"></a></div><div class="recent-post-info"><a class="article-title" href="/article/a3e83579.html" title="获取数组元素的类型 普通函数的返回类型 Promise的返回类型 ()=&gt;Promise的返回类型">获取数组元素的类型 普通函数的返回类型 Promise的返回类型 ()=&gt;Promise的返回类型</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-06-29T08:38:56.816Z" title="发表于 2023-06-29 16:38:56">2023-06-29</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/ts/">ts</a></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/ts/">ts</a></span></div><div class="content">获取数组元素的类型 普通函数的返回类型 Promise的返回类型 ()&#x3D;&gt;Promise的返回类型获取数组元素的类型123type Unpacked&lt;T&gt; = T extends (infer U)[] ? U : T;// type A = stringtype A = Unpacked&lt;string[]&gt;
+这段代码的意思是 判断T是不是数组类型  如果是则返回该数组元素的类型 否则返回T
+普通函数的返回类型123type Unpacked&lt;T&gt; = T extends (...args: any[]) =&gt; infer U ? U : T;// type B = numbertype B = Unpacked&lt;() =&gt; number&gt;
+这段代码的意思是 判断T是不是Function类型  如果是则返回Function return的类型 否则返回T
+Promise的返回类型123type Unpacked&lt;T&gt; = T extends Promise&lt;infer U&gt; ? U :  ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/article/3151c6f1.html" title="为什么null==0为false"><img class="post-bg" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="http://www.limeichao.cn:7791/i/2024/02/26/65dc313cb72c5.jpeg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="为什么null==0为false"></a></div><div class="recent-post-info"><a class="article-title" href="/article/3151c6f1.html" title="为什么null==0为false">为什么null==0为false</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2022-02-23T08:45:28.193Z" title="发表于 2022-02-23 16:45:28">2022-02-23</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/js/">js</a></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/js/">js</a></span></div><div class="content">为什么 null &#x3D;&#x3D; 0 为false 以下为文档截图 附上链接 https://tc39.es/ecma262/#sec-islooselyequal
+
+
+x,y如果类型相同 则比较转化为字符串之后的值
+
+x是null y是undefined 返回true……
+
+如果没有符合以上类型的 则返回false
+
+
+大家都知道  null 是Object类型, 0是Number类型x是Object y是Numberjs在根据比较规则一一对应时 发现并没有匹配的 也就不知道该怎么比较 只能按第14条规则来return false
+真是离了个大普
+并且由于ES6 采用了一种策略叫One JavaScript即:
+
+新版本始终完全向后兼容（但偶尔可能会有轻微、不明显的清理） 
+旧特性不删除也不修复，而是引入更好的版本，比如let就是var的改进版 
+如果语言的某些方面有变化，只在新的语法结构内生效，即隐式选用，例如，yield只在generator中才是关键字、模块和类中的所有代码都默认开启严格模式
+
+所以这个问题很大概率不会修复 最多会引入新的比较方式
+</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/article/562d4505.html" title="Nuxt 中的store数据持久化存储(防止Vuex数据刷新丢失)"><img class="post-bg" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="http://www.limeichao.cn:7791/i/2024/02/26/65dc51448d214.jpeg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Nuxt 中的store数据持久化存储(防止Vuex数据刷新丢失)"></a></div><div class="recent-post-info"><a class="article-title" href="/article/562d4505.html" title="Nuxt 中的store数据持久化存储(防止Vuex数据刷新丢失)">Nuxt 中的store数据持久化存储(防止Vuex数据刷新丢失)</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2021-12-14T09:31:32.560Z" title="发表于 2021-12-14 17:31:32">2021-12-14</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/js/">js</a></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/js/">js</a></span></div><div class="content">Nuxt 中的store数据持久化存储(防止Vuex数据刷新丢失)第一步在根目录plugins文件夹下新建一个store.js(没有plugins的话就自己新建一个)
+第二步12345678910111213141516export default (&#123; app &#125;) =&gt; &#123;  // 获取到store  const store = app.store  // 获取到session中store数据 有就存入  if (sessionStorage.getItem(&#x27;store&#x27;)) &#123;    store.replaceState(Object.assign(&#123;&#125;, store.state, JSON.parse(sessionStorage.getItem(&#x27;store&#x27;))))  &#125;  // 在页面刷新时将vuex里的信息保存到sessionStorage里  window.addEventListener(&#x27;beforeunload&#x27;, () =& ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/article/325b2ef6.html" title="前端项目搭建规范"><img class="post-bg" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="http://www.limeichao.cn:7791/i/2024/02/26/65dc5176dd175.jpeg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="前端项目搭建规范"></a></div><div class="recent-post-info"><a class="article-title" href="/article/325b2ef6.html" title="前端项目搭建规范">前端项目搭建规范</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2021-12-14T09:31:32.560Z" title="发表于 2021-12-14 17:31:32">2021-12-14</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/js/">js</a></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/js/">js</a></span></div><div class="content">项目搭建规范一 代码规范1.1. 集成editorconfig配置EditorConfig 有助于为不同 IDE 编辑器上处理同一项目的多个开发人员维护一致的编码风格。
+123456789101112131415# http://editorconfig.orgroot = true[*] # 表示所有文件适用charset = utf-8 # 设置文件字符集为 utf-8indent_style = space # 缩进风格（tab | space）indent_size = 2 # 缩进大小end_of_line = lf # 控制换行类型(lf | cr | crlf)trim_trailing_whitespace = true # 去除行首的任意空白字符insert_final_newline = true # 始终在文件末尾插入一个新行[*.md] # 表示仅 md 文件适用以下规则max_line_length = offtrim_trailing_whitespace = false
+
+
+
+VSCode需要安装一个插件：EditorConfig for VS Code
+ ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/article/7885e224.html" title="手摸手带你用Hexo撸博客(三)之添加评论系统"><img class="post-bg" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="http://www.limeichao.cn:7791/i/2024/02/26/65dc50e8a4793.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="手摸手带你用Hexo撸博客(三)之添加评论系统"></a></div><div class="recent-post-info"><a class="article-title" href="/article/7885e224.html" title="手摸手带你用Hexo撸博客(三)之添加评论系统">手摸手带你用Hexo撸博客(三)之添加评论系统</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2021-01-04T01:11:52.000Z" title="发表于 2021-01-04 09:11:52">2021-01-04</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/">博客搭建</a></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/">博客搭建</a></span></div><div class="content">注: 笔者采用的是butterfly主题,  主题内置集成评论系统
+butterfly主题开启评论开启评论需要在comments-use中填写你需要的评论。
+以Valine为例
+123456789comments:  use:   - Valine  # 是否显示服务商  text: true  # 懒加载 开启之后无法计数  lazyload: false  # 评论计数  count: true 
+
+配置你的 LeanCloud 应用遵循 Valine的指示去配置你的 LeanCloud 应用。以及查看相应的配置説明。
+12345678910111213141516valine:  appId:  # 先空着 先空着 先空着 (leancloud application app id)  appKey:  # 先空着 先空着 先空着 (leancloud application app key)  pageSize: 10 # comment list page size  avatar: monsterid # gravatar style https://valine.js.o ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/article/fdc79fa4.html" title="手摸手带你用Hexo撸博客(二)之配置主题"><img class="post-bg" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="http://www.limeichao.cn:7791/i/2024/02/26/65dc34f856dd3.jpeg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="手摸手带你用Hexo撸博客(二)之配置主题"></a></div><div class="recent-post-info"><a class="article-title" href="/article/fdc79fa4.html" title="手摸手带你用Hexo撸博客(二)之配置主题">手摸手带你用Hexo撸博客(二)之配置主题</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-12-29T08:10:57.000Z" title="发表于 2020-12-29 16:10:57">2020-12-29</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/">博客搭建</a></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/">博客搭建</a></span></div><div class="content">在上一篇博客手摸手带你用Hexo撸博客(一)中主要介绍了博客的初步搭建今天我们继续讲如何在Hexo搭建的博客中应用主题
+官网选择自己喜欢的主题点击这里Hexo主题进入官网主题页面然后选择自己喜欢的一个我这里选择的是Butterfly主题,也是我目前仍在使用的
+安装目前有三种安装方式Gitee、GitHub、npm
+Gitee安装
+git clone -b master https://github.com/jerryc127/hexo-theme-butterfly.git themes/butterfly
+Github安装
+git clone -b master https://gitee.com/iamjerryw/hexo-theme-butterfly.git themes/butterfly
+NPM安装
+npm i hexo-theme-butterfly
+我个人建议Gitee安装 速度较快
+划重点 划重点 划重点
+在根目录下clone
+在根目录下clone
+在根目录下clone
+重要的事情说三遍
+在这里
+右键点击 Git bash, 运行git工具
+自己从gitee或git ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/article/ec28b177.html" title="css实现瀑布流布局"><img class="post-bg" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="http://www.limeichao.cn:7791/i/2024/02/26/65dc34656ebf9.jpeg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="css实现瀑布流布局"></a></div><div class="recent-post-info"><a class="article-title" href="/article/ec28b177.html" title="css实现瀑布流布局">css实现瀑布流布局</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-12-24T06:58:44.000Z" title="发表于 2020-12-24 14:58:44">2020-12-24</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/css/">css</a></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/css/">css</a><span class="article-meta-link">•</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E5%B8%83%E5%B1%80/">布局</a></span></div><div class="content">实现思路依赖column便可实现最简单实用的瀑布流布局
+代码我这里前端框架用的是Vue, 用其他的也一样
+HTML1234567&lt;div class=&quot;waterfall&quot;&gt;        &lt;div v-for=&quot;(item,index) in 20&quot;             :style=&quot;&#123;height:heights[Math.floor(Math.random()*4)] + &#x27;px&#x27;,background:colors[Math.floor(Math.random()*12)]&#125;&quot;             :key=&quot;index&quot;&gt;            &#123;&#123;item&#125;&#125;        &lt;/div&gt;    &lt;/div&gt;
+
+Script12345678910111213&lt;script&gt;    export default &#123;        data() ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/article/7f28fa45.html" title="手摸手带你用Hexo撸博客(一)"><img class="post-bg" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="http://www.limeichao.cn:7791/i/2024/02/26/65dc32951a28f.jpeg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="手摸手带你用Hexo撸博客(一)"></a></div><div class="recent-post-info"><a class="article-title" href="/article/7f28fa45.html" title="手摸手带你用Hexo撸博客(一)">手摸手带你用Hexo撸博客(一)</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-12-22T16:00:00.000Z" title="发表于 2020-12-23 00:00:00">2020-12-23</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/">博客搭建</a></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/">博客搭建</a></span></div><div class="content">手摸手带你撸博客(一)环境搭建安装 node狂点下一步
+命令行输入此条命令  如果能看到版本号则安装成功
+1node -v
+
+
+
+安装Git(同上) 实在不会的小伙伴百度一下,教程很多,不细说了
+命令行输入此条命令  如果能看到版本号则安装成功
+1git version
+
+
+
+安装 Hexo博客的搭建工具有很多,这里我选用的是Hexo,原因嘛,因为我只会这一个,相同功能的轮子会一个就够了,而且也确实好用
+全局安装Hexo
+打开 CMD
+npm install -g hexo-cli
+安装完成后，就可以通过Hexo搭建博客了 。
+进入要创建项目的目录, 执行以下命令
+1hexo init my-blog
+
+新建完成后，指定文件夹的目录如下：
+1234567├── _config.yml 博客主题的大部分参数配置(不包括主题)├── package.json 这就不用说了吧├── scaffolds (模板文件夹 新建文件时根据模板创建)├── source   |   ├── _drafts(博客草稿文件,需要自己新建)   |   └── _posts (博客的MD文件,你所写的文章一 ...</div></div></div><nav id="pagination"><div class="pagination"><span class="page-number current">1</span><a class="page-number" href="/page/2/#content-inner">2</a><a class="extend next" rel="next" href="/page/2/#content-inner"><i class="fas fa-chevron-right fa-fw"></i></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://pic.rmb.bdstatic.com/bjh/7bde11e6a7dacab7cd41372aaa671c08.jpeg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">李美超</div><div class="author-info__description"></div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">15</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">11</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">9</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/Big0range"><i class="fab fa-github"></i><span>关注我</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://gitee.com/li_mei_chao" target="_blank" title="Gitee(不是Github)"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:957779152@qq.com" target="_blank" title="Email(邮箱)"><i class="fas fa-envelope"></i></a><a class="social-icon" href="https://www.npmjs.com/~li_mei_chao" target="_blank" title="NPM"><i class="fab fa-npm"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">阿巴阿巴阿巴</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/article/17962290.html" title="vane 一个适用于前端打工人的全栈框架,nodejs+vue3+typescript"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://cos.limeichao.cn/images/dalailai.png?imageMogr2/format/webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="vane 一个适用于前端打工人的全栈框架,nodejs+vue3+typescript"/></a><div class="content"><a class="title" href="/article/17962290.html" title="vane 一个适用于前端打工人的全栈框架,nodejs+vue3+typescript">vane 一个适用于前端打工人的全栈框架,nodejs+vue3+typescript</a><time datetime="2023-06-29T08:46:00.000Z" title="发表于 2023-06-29 16:46:00">2023-06-29</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/article/a3e83579.html" title="获取数组元素的类型 普通函数的返回类型 Promise的返回类型 ()=&gt;Promise的返回类型"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="http://www.limeichao.cn:7791/i/2024/02/26/65dc32951a28f.jpeg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="获取数组元素的类型 普通函数的返回类型 Promise的返回类型 ()=&gt;Promise的返回类型"/></a><div class="content"><a class="title" href="/article/a3e83579.html" title="获取数组元素的类型 普通函数的返回类型 Promise的返回类型 ()=&gt;Promise的返回类型">获取数组元素的类型 普通函数的返回类型 Promise的返回类型 ()=&gt;Promise的返回类型</a><time datetime="2023-06-29T08:38:56.816Z" title="发表于 2023-06-29 16:38:56">2023-06-29</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/article/3151c6f1.html" title="为什么null==0为false"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="http://www.limeichao.cn:7791/i/2024/02/26/65dc313cb72c5.jpeg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="为什么null==0为false"/></a><div class="content"><a class="title" href="/article/3151c6f1.html" title="为什么null==0为false">为什么null==0为false</a><time datetime="2022-02-23T08:45:28.193Z" title="发表于 2022-02-23 16:45:28">2022-02-23</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/article/562d4505.html" title="Nuxt 中的store数据持久化存储(防止Vuex数据刷新丢失)"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="http://www.limeichao.cn:7791/i/2024/02/26/65dc51448d214.jpeg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Nuxt 中的store数据持久化存储(防止Vuex数据刷新丢失)"/></a><div class="content"><a class="title" href="/article/562d4505.html" title="Nuxt 中的store数据持久化存储(防止Vuex数据刷新丢失)">Nuxt 中的store数据持久化存储(防止Vuex数据刷新丢失)</a><time datetime="2021-12-14T09:31:32.560Z" title="发表于 2021-12-14 17:31:32">2021-12-14</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/article/325b2ef6.html" title="前端项目搭建规范"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="http://www.limeichao.cn:7791/i/2024/02/26/65dc5176dd175.jpeg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="前端项目搭建规范"/></a><div class="content"><a class="title" href="/article/325b2ef6.html" title="前端项目搭建规范">前端项目搭建规范</a><time datetime="2021-12-14T09:31:32.560Z" title="发表于 2021-12-14 17:31:32">2021-12-14</time></div></div></div></div><div class="card-widget card-categories"><div class="item-headline">
+            <i class="fas fa-folder-open"></i>
+            <span>分类</span>
+            <a class="card-more-btn" href="/categories/" title="查看更多">
+    <i class="fas fa-angle-right"></i></a>
+            </div>
+            <ul class="card-category-list" id="aside-cat-list">
+            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/css/"><span class="card-category-list-name">css</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/js/"><span class="card-category-list-name">js</span><span class="card-category-list-count">6</span></a><ul class="card-category-list child"><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/js/%E7%AE%97%E6%B3%95/"><span class="card-category-list-name">算法</span><span class="card-category-list-count">1</span></a></li></ul></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/ts/"><span class="card-category-list-name">ts</span><span class="card-category-list-count">2</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/vue/"><span class="card-category-list-name">vue</span><span class="card-category-list-count">1</span></a><ul class="card-category-list child"><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/vue/vue3/"><span class="card-category-list-name">vue3</span><span class="card-category-list-count">1</span></a></li></ul></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/webpack/"><span class="card-category-list-name">webpack</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"><span class="card-category-list-name">博客搭建</span><span class="card-category-list-count">3</span></a></li>
+            </ul></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/vue/" style="font-size: 1.1em; color: #999">vue</a> <a href="/tags/vue3/" style="font-size: 1.1em; color: #999">vue3</a> <a href="/tags/%E7%AE%97%E6%B3%95/" style="font-size: 1.1em; color: #999">算法</a> <a href="/tags/ts/" style="font-size: 1.1em; color: #999">ts</a> <a href="/tags/js/" style="font-size: 1.5em; color: #99a9bf">js</a> <a href="/tags/vue3%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/" style="font-size: 1.1em; color: #999">vue3生命周期</a> <a href="/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/" style="font-size: 1.3em; color: #99a1ac">博客搭建</a> <a href="/tags/css/" style="font-size: 1.1em; color: #999">css</a> <a href="/tags/ts-js-Vue3-TypeScript-Node/" style="font-size: 1.1em; color: #999">ts js Vue3 TypeScript Node</a> <a href="/tags/%E5%B8%83%E5%B1%80/" style="font-size: 1.1em; color: #999">布局</a> <a href="/tags/webpack/" style="font-size: 1.1em; color: #999">webpack</a></div></div><div class="card-widget card-archives"><div class="item-headline"><i class="fas fa-archive"></i><span>归档</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/06/"><span class="card-archive-list-date">六月 2023</span><span class="card-archive-list-count">2</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2022/02/"><span class="card-archive-list-date">二月 2022</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/12/"><span class="card-archive-list-date">十二月 2021</span><span class="card-archive-list-count">2</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/01/"><span class="card-archive-list-date">一月 2021</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/12/"><span class="card-archive-list-date">十二月 2020</span><span class="card-archive-list-count">5</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/10/"><span class="card-archive-list-date">十月 2020</span><span class="card-archive-list-count">4</span></a></li></ul></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站资讯</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">15</div></div><div class="webinfo-item"><div class="item-name">已运行时间 :</div><div class="item-count" id="runtimeshow" data-publishDate="2018-06-06T16:00:00.000Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站总字数 :</div><div class="item-count">16.2k</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站总访问量 :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2024-02-27T01:23:26.463Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer" style="background-image: url('https://pic.rmb.bdstatic.com/bjh/e9cacddaab0a63026e7c73ea9957c39c.jpeg')"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2024 By 李美超</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="translateLink" type="button" title="简繁转换">簡</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=4.13.0"></script><script src="/js/main.js?v=4.13.0"></script><script src="/js/tw_cn.js?v=4.13.0"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.33/dist/fancybox/fancybox.umd.min.js"></script><script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.8.8/dist/lazyload.iife.min.js"></script><script>function panguFn () {
+  if (typeof pangu === 'object') pangu.autoSpacingPage()
   else {
-    getScript('https://cdn.jsdelivr.net/npm/pangu/dist/browser/pangu.min.js')
+    getScript('https://cdn.jsdelivr.net/npm/pangu@4.0.7/dist/browser/pangu.min.js')
       .then(() => {
-        pangu.spacingElementById('content-inner')
+        pangu.autoSpacingPage()
       })
   }
 }
@@ -183,42 +285,4 @@ function panguInit () {
   }
 }
 
-document.addEventListener('DOMContentLoaded', panguInit)</script><script src="/js/search/local-search.js"></script><div class="js-pjax"><script>function subtitleType () {
-  if (true) { 
-    var typed = new Typed("#subtitle", {
-      strings: "面对疾风吧  哈塞给!".split(","),
-      startDelay: 300,
-      typeSpeed: 150,
-      loop: false,
-      backSpeed: 50
-    })
-  } else {
-    document.getElementById("subtitle").innerHTML = '面'
-  }
-}
-
-if (true) {
-  if (typeof Typed === 'function') {
-    subtitleType()
-  } else {
-    getScript('https://cdn.jsdelivr.net/npm/typed.js/lib/typed.min.js').then(subtitleType)
-  }
-} else {
-  subtitleType()
-}</script><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><script defer="defer" id="ribbon" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/canvas-ribbon.min.js" size="150" alpha="0.6" zIndex="-1" mobile="true" data-click="false"></script><script defer="defer" id="fluttering_ribbon" mobile="true" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/canvas-fluttering-ribbon.min.js"></script><script id="canvas_nest" defer="defer" color="0,255,0" opacity="1" zIndex="-1" count="99" mobile="false" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/canvas-nest.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
-POWERMODE.shake = false;
-POWERMODE.mobile = true;
-document.body.addEventListener('input', POWERMODE);
-</script><script>(function(){
-  const bp = document.createElement('script');
-  const curProtocol = window.location.protocol.split(':')[0];
-  if (curProtocol === 'https') {
-    bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
-  }
-  else{
-    bp.src = 'http://push.zhanzhang.baidu.com/push.js';
-  }
-  bp.dataset.pjax = ''
-  const s = document.getElementsByTagName("script")[0];
-  s.parentNode.insertBefore(bp, s);
-})()</script></div></body></html>
+document.addEventListener('DOMContentLoaded', panguInit)</script><div class="js-pjax"></div><script defer="defer" id="ribbon" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/dist/canvas-ribbon.min.js" size="150" alpha="0.6" zIndex="-1" mobile="true" data-click="false"></script><script defer="defer" id="fluttering_ribbon" mobile="true" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/dist/canvas-fluttering-ribbon.min.js"></script><script id="canvas_nest" defer="defer" color="0,255,0" opacity="1" zIndex="-1" count="99" mobile="false" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/dist/canvas-nest.min.js"></script><script id="click-show-text" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/dist/click-show-text.min.js" data-mobile="false" data-text="芜湖,起飞,大意了,没有闪" data-fontsize="15px" data-random="true" async="async"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div><div id="local-search-stats-wrap"></div></div></div><div id="search-mask"></div><script src="/js/search/local-search.js?v=4.13.0"></script></div></div></body></html>
