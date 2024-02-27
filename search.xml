@@ -170,34 +170,6 @@
       </tags>
   </entry>
   <entry>
-    <title>vue3.x中的生命周期</title>
-    <url>/article/d5cc2619.html</url>
-    <content><![CDATA[<h2 id="vue3和vue2生命周期的对比"><a href="#vue3和vue2生命周期的对比" class="headerlink" title="vue3和vue2生命周期的对比"></a>vue3和vue2生命周期的对比</h2><p>Vue3 的生命周期比较多。</p>
-<ol>
-<li>setup() :开始创建组件之前，在beforeCreate和created之前执行。创建的是data和method</li>
-<li>onBeforeMount() : 组件挂载到节点上之前执行的函数。</li>
-<li>onMounted() : 组件挂载完成后执行的函数。</li>
-<li>onBeforeUpdate(): 组件更新之前执行的函数。</li>
-<li>onUpdated(): 组件更新完成之后执行的函数。</li>
-<li>onBeforeUnmount(): 组件卸载之前执行的函数。</li>
-<li>onUnmounted(): 组件卸载完成后执行的函数。</li>
-<li>onActivated(): 被包含在<keep-alive>中的组件，会多出两个生命周期钩子函数。被激活时执行。</li>
-<li>onDeactivated(): 比如从 A 组件，切换到 B 组件，A 组件消失时执行。</li>
-<li>onErrorCaptured(): 当捕获一个来自子孙组件的异常时激活钩子函数（以后用到再讲，不好展现）。</li>
-</ol>
-<p>注：使用<span style="color:red">&lt;keep-alive&gt;</span> 组件会将数据保留在内存中，比如我们不想每次看到一个页面都重新加载数据，就可以使用<keep-alive>组件解决。<br>    vue3使用生命周期需要单独从vue中引用,并且只能在setup函数内调用</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="title class_">Vue2</span>--------------vue3</span><br><span class="line">beforeCreate  -&gt; <span class="title function_">setup</span>()</span><br><span class="line">created       -&gt; <span class="title function_">setup</span>()</span><br><span class="line">beforeMount   -&gt; onBeforeMount</span><br><span class="line">mounted       -&gt; onMounted</span><br><span class="line">beforeUpdate  -&gt; onBeforeUpdate</span><br><span class="line">updated       -&gt; onUpdated</span><br><span class="line">beforeDestroy -&gt; onBeforeUnmount</span><br><span class="line">destroyed     -&gt; onUnmounted</span><br><span class="line">activated     -&gt; onActivated</span><br><span class="line">deactivated   -&gt; onDeactivated</span><br><span class="line">errorCaptured -&gt; onErrorCaptured</span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>vue</category>
-        <category>vue3</category>
-      </categories>
-      <tags>
-        <tag>vue</tag>
-        <tag>vue3</tag>
-        <tag>vue3生命周期</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>js常用API整理</title>
     <url>/article/9796ce43.html</url>
     <content><![CDATA[<h2 id="js常用API整理"><a href="#js常用API整理" class="headerlink" title="js常用API整理"></a>js常用API整理</h2><h3 id="Array"><a href="#Array" class="headerlink" title="Array"></a>Array</h3><h4 id="new-Set（）"><a href="#new-Set（）" class="headerlink" title="new Set（）"></a>new Set（）</h4><p>数组去重</p>
@@ -456,6 +428,34 @@
       </tags>
   </entry>
   <entry>
+    <title>vue3.x中的生命周期</title>
+    <url>/article/d5cc2619.html</url>
+    <content><![CDATA[<h2 id="vue3和vue2生命周期的对比"><a href="#vue3和vue2生命周期的对比" class="headerlink" title="vue3和vue2生命周期的对比"></a>vue3和vue2生命周期的对比</h2><p>Vue3 的生命周期比较多。</p>
+<ol>
+<li>setup() :开始创建组件之前，在beforeCreate和created之前执行。创建的是data和method</li>
+<li>onBeforeMount() : 组件挂载到节点上之前执行的函数。</li>
+<li>onMounted() : 组件挂载完成后执行的函数。</li>
+<li>onBeforeUpdate(): 组件更新之前执行的函数。</li>
+<li>onUpdated(): 组件更新完成之后执行的函数。</li>
+<li>onBeforeUnmount(): 组件卸载之前执行的函数。</li>
+<li>onUnmounted(): 组件卸载完成后执行的函数。</li>
+<li>onActivated(): 被包含在<keep-alive>中的组件，会多出两个生命周期钩子函数。被激活时执行。</li>
+<li>onDeactivated(): 比如从 A 组件，切换到 B 组件，A 组件消失时执行。</li>
+<li>onErrorCaptured(): 当捕获一个来自子孙组件的异常时激活钩子函数（以后用到再讲，不好展现）。</li>
+</ol>
+<p>注：使用<span style="color:red">&lt;keep-alive&gt;</span> 组件会将数据保留在内存中，比如我们不想每次看到一个页面都重新加载数据，就可以使用<keep-alive>组件解决。<br>    vue3使用生命周期需要单独从vue中引用,并且只能在setup函数内调用</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="title class_">Vue2</span>--------------vue3</span><br><span class="line">beforeCreate  -&gt; <span class="title function_">setup</span>()</span><br><span class="line">created       -&gt; <span class="title function_">setup</span>()</span><br><span class="line">beforeMount   -&gt; onBeforeMount</span><br><span class="line">mounted       -&gt; onMounted</span><br><span class="line">beforeUpdate  -&gt; onBeforeUpdate</span><br><span class="line">updated       -&gt; onUpdated</span><br><span class="line">beforeDestroy -&gt; onBeforeUnmount</span><br><span class="line">destroyed     -&gt; onUnmounted</span><br><span class="line">activated     -&gt; onActivated</span><br><span class="line">deactivated   -&gt; onDeactivated</span><br><span class="line">errorCaptured -&gt; onErrorCaptured</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>vue</category>
+        <category>vue3</category>
+      </categories>
+      <tags>
+        <tag>vue</tag>
+        <tag>vue3</tag>
+        <tag>vue3生命周期</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>手摸手带你用Hexo撸博客(一)</title>
     <url>/article/7f28fa45.html</url>
     <content><![CDATA[<h1 id="手摸手带你撸博客-一"><a href="#手摸手带你撸博客-一" class="headerlink" title="手摸手带你撸博客(一)"></a>手摸手带你撸博客(一)</h1><h2 id="环境搭建"><a href="#环境搭建" class="headerlink" title="环境搭建"></a>环境搭建</h2><h3 id="安装-node"><a href="#安装-node" class="headerlink" title="安装 node"></a>安装 <a href="http://nodejs.cn/">node</a></h3><p>狂点下一步</p>
@@ -639,6 +639,26 @@
       </tags>
   </entry>
   <entry>
+    <title>Nuxt 中的store数据持久化存储(防止Vuex数据刷新丢失)</title>
+    <url>/article/562d4505.html</url>
+    <content><![CDATA[<h1 id="Nuxt-中的store数据持久化存储-防止Vuex数据刷新丢失"><a href="#Nuxt-中的store数据持久化存储-防止Vuex数据刷新丢失" class="headerlink" title="Nuxt 中的store数据持久化存储(防止Vuex数据刷新丢失)"></a>Nuxt 中的store数据持久化存储(防止Vuex数据刷新丢失)</h1><h2 id="第一步"><a href="#第一步" class="headerlink" title="第一步"></a>第一步</h2><p>在根目录plugins文件夹下新建一个<code>store.js</code>(没有plugins的话就自己新建一个)</p>
+<h2 id="第二步"><a href="#第二步" class="headerlink" title="第二步"></a>第二步</h2><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> (&#123; app &#125;) =&gt; &#123;</span><br><span class="line">  <span class="comment">// 获取到store</span></span><br><span class="line">  <span class="keyword">const</span> store = app.<span class="property">store</span></span><br><span class="line">  <span class="comment">// 获取到session中store数据 有就存入</span></span><br><span class="line">  <span class="keyword">if</span> (<span class="variable language_">sessionStorage</span>.<span class="title function_">getItem</span>(<span class="string">&#x27;store&#x27;</span>)) &#123;</span><br><span class="line">    store.<span class="title function_">replaceState</span>(<span class="title class_">Object</span>.<span class="title function_">assign</span>(&#123;&#125;, store.<span class="property">state</span>, <span class="title class_">JSON</span>.<span class="title function_">parse</span>(<span class="variable language_">sessionStorage</span>.<span class="title function_">getItem</span>(<span class="string">&#x27;store&#x27;</span>))))</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="comment">// 在页面刷新时将vuex里的信息保存到sessionStorage里</span></span><br><span class="line">  <span class="variable language_">window</span>.<span class="title function_">addEventListener</span>(<span class="string">&#x27;beforeunload&#x27;</span>, <span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="variable language_">sessionStorage</span>.<span class="title function_">setItem</span>(<span class="string">&#x27;store&#x27;</span>, <span class="title class_">JSON</span>.<span class="title function_">stringify</span>(store.<span class="property">state</span>))</span><br><span class="line">  &#125;)</span><br><span class="line">  <span class="variable language_">window</span>.<span class="title function_">addEventListener</span>(<span class="string">&#x27;pagehide&#x27;</span>, <span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="variable language_">sessionStorage</span>.<span class="title function_">setItem</span>(<span class="string">&#x27;store&#x27;</span>, <span class="title class_">JSON</span>.<span class="title function_">stringify</span>(store.<span class="property">state</span>))</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h2 id="第三步"><a href="#第三步" class="headerlink" title="第三步"></a>第三步</h2><p>在根目录下&#x3D;&#x3D;&#x3D;&gt;<code>nuxt.config.js</code>中&#x3D;&#x3D;&#x3D;&gt;plugins的数组内添加一项<code>&#123; src: &#39;~/plugins/store.js&#39;, ssr: false &#125;</code></p>
+<p><code>ssr:false</code>的意思是禁止服务端渲染  因为服务端中是没有window的</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="attr">plugins</span>: [</span><br><span class="line">  &#123; <span class="attr">src</span>: <span class="string">&#x27;~/plugins/store.js&#x27;</span>, <span class="attr">ssr</span>: <span class="literal">false</span> &#125;</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="OK"><a href="#OK" class="headerlink" title="OK"></a>OK</h3>]]></content>
+      <categories>
+        <category>js</category>
+      </categories>
+      <tags>
+        <tag>js</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>手摸手带你用Hexo撸博客(三)之添加评论系统</title>
     <url>/article/7885e224.html</url>
     <content><![CDATA[<p>注: 笔者采用的是butterfly主题,  主题内置集成评论系统</p>
@@ -753,18 +773,28 @@
       </tags>
   </entry>
   <entry>
-    <title>Nuxt 中的store数据持久化存储(防止Vuex数据刷新丢失)</title>
-    <url>/article/562d4505.html</url>
-    <content><![CDATA[<h1 id="Nuxt-中的store数据持久化存储-防止Vuex数据刷新丢失"><a href="#Nuxt-中的store数据持久化存储-防止Vuex数据刷新丢失" class="headerlink" title="Nuxt 中的store数据持久化存储(防止Vuex数据刷新丢失)"></a>Nuxt 中的store数据持久化存储(防止Vuex数据刷新丢失)</h1><h2 id="第一步"><a href="#第一步" class="headerlink" title="第一步"></a>第一步</h2><p>在根目录plugins文件夹下新建一个<code>store.js</code>(没有plugins的话就自己新建一个)</p>
-<h2 id="第二步"><a href="#第二步" class="headerlink" title="第二步"></a>第二步</h2><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> (&#123; app &#125;) =&gt; &#123;</span><br><span class="line">  <span class="comment">// 获取到store</span></span><br><span class="line">  <span class="keyword">const</span> store = app.<span class="property">store</span></span><br><span class="line">  <span class="comment">// 获取到session中store数据 有就存入</span></span><br><span class="line">  <span class="keyword">if</span> (<span class="variable language_">sessionStorage</span>.<span class="title function_">getItem</span>(<span class="string">&#x27;store&#x27;</span>)) &#123;</span><br><span class="line">    store.<span class="title function_">replaceState</span>(<span class="title class_">Object</span>.<span class="title function_">assign</span>(&#123;&#125;, store.<span class="property">state</span>, <span class="title class_">JSON</span>.<span class="title function_">parse</span>(<span class="variable language_">sessionStorage</span>.<span class="title function_">getItem</span>(<span class="string">&#x27;store&#x27;</span>))))</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="comment">// 在页面刷新时将vuex里的信息保存到sessionStorage里</span></span><br><span class="line">  <span class="variable language_">window</span>.<span class="title function_">addEventListener</span>(<span class="string">&#x27;beforeunload&#x27;</span>, <span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="variable language_">sessionStorage</span>.<span class="title function_">setItem</span>(<span class="string">&#x27;store&#x27;</span>, <span class="title class_">JSON</span>.<span class="title function_">stringify</span>(store.<span class="property">state</span>))</span><br><span class="line">  &#125;)</span><br><span class="line">  <span class="variable language_">window</span>.<span class="title function_">addEventListener</span>(<span class="string">&#x27;pagehide&#x27;</span>, <span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="variable language_">sessionStorage</span>.<span class="title function_">setItem</span>(<span class="string">&#x27;store&#x27;</span>, <span class="title class_">JSON</span>.<span class="title function_">stringify</span>(store.<span class="property">state</span>))</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h2 id="第三步"><a href="#第三步" class="headerlink" title="第三步"></a>第三步</h2><p>在根目录下&#x3D;&#x3D;&#x3D;&gt;<code>nuxt.config.js</code>中&#x3D;&#x3D;&#x3D;&gt;plugins的数组内添加一项<code>&#123; src: &#39;~/plugins/store.js&#39;, ssr: false &#125;</code></p>
-<p><code>ssr:false</code>的意思是禁止服务端渲染  因为服务端中是没有window的</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="attr">plugins</span>: [</span><br><span class="line">  &#123; <span class="attr">src</span>: <span class="string">&#x27;~/plugins/store.js&#x27;</span>, <span class="attr">ssr</span>: <span class="literal">false</span> &#125;</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="OK"><a href="#OK" class="headerlink" title="OK"></a>OK</h3>]]></content>
+    <title>为什么null==0为false</title>
+    <url>/article/3151c6f1.html</url>
+    <content><![CDATA[<h2 id="为什么-null-0-为false"><a href="#为什么-null-0-为false" class="headerlink" title="为什么 null &#x3D;&#x3D; 0 为false"></a>为什么 null &#x3D;&#x3D; 0 为false</h2><p> 以下为文档截图 附上链接 <a href="https://tc39.es/ecma262/#sec-islooselyequal">https://tc39.es/ecma262/#sec-islooselyequal</a></p>
+<p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/269a4ba673d949689831770e1fac7b9c~tplv-k3u1fbpfcp-watermark.image" alt="微信截图_20220208095546.png"></p>
+<ol>
+<li><p>x,y如果类型相同 则比较转化为字符串之后的值</p>
+</li>
+<li><p>x是null y是undefined 返回true<br>……</p>
+</li>
+<li><p>如果没有符合以上类型的 则返回false</p>
+</li>
+</ol>
+<p>大家都知道  null 是Object类型, 0是Number类型<br>x是Object y是Number<br>js在根据比较规则一一对应时 发现并没有匹配的 也就不知道该怎么比较 只能按第14条规则来<code>return false</code></p>
+<p>真是离了个大普</p>
+<p>并且由于ES6 采用了一种策略叫One JavaScript<br>即:</p>
+<ol>
+<li>新版本始终完全向后兼容（但偶尔可能会有轻微、不明显的清理） </li>
+<li>旧特性不删除也不修复，而是引入更好的版本，比如let就是var的改进版 </li>
+<li>如果语言的某些方面有变化，只在新的语法结构内生效，即隐式选用，例如，yield只在generator中才是关键字、模块和类中的所有代码都默认开启严格模式</li>
+</ol>
+<p>所以这个问题很大概率不会修复 最多会引入新的比较方式</p>
+]]></content>
       <categories>
         <category>js</category>
       </categories>
@@ -1079,36 +1109,6 @@
 
 
 
-]]></content>
-      <categories>
-        <category>js</category>
-      </categories>
-      <tags>
-        <tag>js</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>为什么null==0为false</title>
-    <url>/article/3151c6f1.html</url>
-    <content><![CDATA[<h2 id="为什么-null-0-为false"><a href="#为什么-null-0-为false" class="headerlink" title="为什么 null &#x3D;&#x3D; 0 为false"></a>为什么 null &#x3D;&#x3D; 0 为false</h2><p> 以下为文档截图 附上链接 <a href="https://tc39.es/ecma262/#sec-islooselyequal">https://tc39.es/ecma262/#sec-islooselyequal</a></p>
-<p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/269a4ba673d949689831770e1fac7b9c~tplv-k3u1fbpfcp-watermark.image" alt="微信截图_20220208095546.png"></p>
-<ol>
-<li><p>x,y如果类型相同 则比较转化为字符串之后的值</p>
-</li>
-<li><p>x是null y是undefined 返回true<br>……</p>
-</li>
-<li><p>如果没有符合以上类型的 则返回false</p>
-</li>
-</ol>
-<p>大家都知道  null 是Object类型, 0是Number类型<br>x是Object y是Number<br>js在根据比较规则一一对应时 发现并没有匹配的 也就不知道该怎么比较 只能按第14条规则来<code>return false</code></p>
-<p>真是离了个大普</p>
-<p>并且由于ES6 采用了一种策略叫One JavaScript<br>即:</p>
-<ol>
-<li>新版本始终完全向后兼容（但偶尔可能会有轻微、不明显的清理） </li>
-<li>旧特性不删除也不修复，而是引入更好的版本，比如let就是var的改进版 </li>
-<li>如果语言的某些方面有变化，只在新的语法结构内生效，即隐式选用，例如，yield只在generator中才是关键字、模块和类中的所有代码都默认开启严格模式</li>
-</ol>
-<p>所以这个问题很大概率不会修复 最多会引入新的比较方式</p>
 ]]></content>
       <categories>
         <category>js</category>
